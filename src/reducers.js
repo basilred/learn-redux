@@ -26,7 +26,7 @@ function todos(state = [], action) {
 
     default:
       return state;
-  };
+  }
 };
 
 function visibilityFilter(state = SHOW_ALL, action) {
@@ -35,7 +35,7 @@ function visibilityFilter(state = SHOW_ALL, action) {
       return action.filter;
     default:
       return state;
-  };
+  }
 };
 
 const todoApp = combineReducers({
