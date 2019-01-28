@@ -2,7 +2,7 @@ import { combineReducers } from 'redux';
 import { ADD_TODO, TOGGLE_TODO, SET_VISIBILITY_FILTER, VisibilityFilters } from './actions';
 const { SHOW_ALL } = VisibilityFilters;
 
-function todos(state = [], action) {
+function todos(state = [], action: any) {
   switch (action.type) {
     case ADD_TODO:
       return [
@@ -29,7 +29,7 @@ function todos(state = [], action) {
   }
 };
 
-function visibilityFilter(state = SHOW_ALL, action) {
+function visibilityFilter(state = SHOW_ALL, action: any) {
   switch (action.type) {
     case SET_VISIBILITY_FILTER:
       return action.filter;
