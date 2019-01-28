@@ -2,8 +2,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { addTodo } from '../actions';
 
-let AddTodo = ({ dispatch }) => {
-  let input;
+const AddTodo = ({ dispatch }: { dispatch: any }) => {
+  let input: HTMLInputElement;
 
   return (
     <div>
@@ -15,7 +15,7 @@ let AddTodo = ({ dispatch }) => {
         dispatch(addTodo(input.value));
         input.value = '';
       }}>
-        <input ref={node => { input = node; }} />
+        <input ref={(node: HTMLInputElement) => { input = node; }} />
         <button type="submit">
           Add Todo
         </button>
@@ -23,6 +23,5 @@ let AddTodo = ({ dispatch }) => {
     </div>
   );
 };
-AddTodo = connect()(AddTodo);
 
-export default AddTodo;
+export default connect()(AddTodo);

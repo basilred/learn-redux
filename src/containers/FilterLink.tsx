@@ -2,13 +2,13 @@ import { connect } from 'react-redux';
 import { setVisibilityFilter } from '../actions';
 import Link from '../components/Link';
 
-const mapStateToProps = (state, ownProps) => {
+const mapStateToProps = (state: { visibilityFilter: string; }, ownProps: { filter: string; }) => {
   return {
     active: ownProps.filter === state.visibilityFilter
   };
 };
 
-const mapDispatchToProps = (dispatch, ownProps) => {
+const mapDispatchToProps = (dispatch: (arg0: { type: string; filter: string; }) => void, ownProps: { filter: string; }) => {
   return {
     onClick: () => {
       dispatch(setVisibilityFilter(ownProps.filter))
@@ -16,9 +16,7 @@ const mapDispatchToProps = (dispatch, ownProps) => {
   };
 };
 
-const FilterLink = connect(
+export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(Link);
-
-export default FilterLink;

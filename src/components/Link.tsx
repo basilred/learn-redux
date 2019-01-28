@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const Link = ({ active, children, onClick }) => {
+const Link = ({ active, children, onClick }: { active: boolean, children: any, onClick: any }) => {
   if (active) {
     return <span>{children}</span>;
   }
@@ -17,12 +16,6 @@ const Link = ({ active, children, onClick }) => {
       {children}
     </a>
   );
-};
-
-Link.propTypes = {
-  active: PropTypes.bool.isRequired,
-  children: PropTypes.node.isRequired,
-  onClick: PropTypes.func.isRequired,
 };
 
 export default Link;
