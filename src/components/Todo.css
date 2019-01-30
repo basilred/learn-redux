@@ -1,0 +1,13 @@
+.Todo {
+  margin: 5px;
+  padding: 10px;
+  background-color: #e6e6e6;
+  list-style: none;
+  border-radius: 2px;
+  transition: color 200ms;
+}
+
+.Todo_completed {
+  text-decoration: line-through;
+  color: lightgrey;
+}
