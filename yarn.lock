@@ -865,6 +865,11 @@
     lodash "^4.17.10"
     to-fast-properties "^2.0.0"
 
+"@bem-react/classname@^1.4.3":
+  version "1.4.3"
+  resolved "https://registry.yarnpkg.com/@bem-react/classname/-/classname-1.4.3.tgz#150b159bbac39f0f78d23d32a7c10e1308505fdb"
+  integrity sha512-dTqi7Rg3jWeKvNOH8AhzJSg5j7QNKL65+aCu4XKM7Bt7UnjKA83CNNtEFt9GgPy+I9G6npBnYXqFgVV0u6w67g==
+
 "@csstools/convert-colors@^1.4.0":
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/@csstools/convert-colors/-/convert-colors-1.4.0.tgz#ad495dc41b12e75d588c6db8b9834f08fa131eb7"
