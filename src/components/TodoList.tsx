@@ -1,5 +1,6 @@
 import React from 'react';
 import Todo from './Todo';
+import { cn } from '@bem-react/classname';
 import './TodoList.css';
 
 interface ITodo {
@@ -8,8 +9,10 @@ interface ITodo {
   text: string;
 };
 
+const listCn = cn('TodoList');
+
 const TodoList = ({ todos, onTodoClick }: { todos: Array<ITodo>; onTodoClick: (id: number) => any }) => (
-  <ul className="TodoList">
+  <ul className={listCn()}>
     {todos.map(todo => (
       <Todo
         key={todo.id}
